@@ -14,7 +14,7 @@ let result = showSalary(users, age);
 // Объект одного пользователя
 let user1 = {
   "balance": "$1,825.65",
-  "picture": "https://placehold.it/32x32",
+  "picture": "https://placehold.it/32x32",             
   "age": 21,
   "name": "Golden Branch",
   "gender": "male",
