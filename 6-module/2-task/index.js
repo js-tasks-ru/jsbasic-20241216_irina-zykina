@@ -9,7 +9,9 @@ export default class ProductCard {
     this.elem = createElement(`
     <div class="card">
     <div class="card__top">
-        <img src="../../assets/images/products/${product.image}" class="card__image" alt="product">
+        <img src="../../assets/images/products/${
+          product.image
+        }" class="card__image" alt="product">
         <span class="card__price">€${product.price.toFixed(2)}</span>
     </div>
     <div class="card__body">
@@ -20,7 +22,8 @@ export default class ProductCard {
     </div>
     </div>`);
     this.elem.addEventListener("click", (event) => {
-      if (event.target.parentElement.className === `card__button`) {
+      let btn = event.target.closest(".card__button");
+      if (btn) {
         let event = new CustomEvent("product-add", {
           detail: this.product.id,
           bubbles: true,
