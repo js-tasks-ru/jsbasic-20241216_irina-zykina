@@ -10,9 +10,7 @@ export default class Carousel {
     const slidesHtml = this.slides
       .map(
         (slide) => `<div class="carousel__slide" data-id="${slide.id}">
-  <img src="../../assets/images/carousel/${
-    slide.image
-  }" class="carousel__img" alt="slide">
+  <img src="../../assets/images/carousel/${slide.image}" class="carousel__img" alt="slide">
   <div class="carousel__caption">
     <span class="carousel__price">€${slide.price.toFixed(2)}</span>
     <div class="carousel__title">${slide.name}</div>
@@ -68,6 +66,7 @@ export default class Carousel {
         parentClassName === "carousel__arrow carousel__arrow_right" &&
         offset < this.slides.length - 1
       ) {
+        
         offset++;
       }
       carouselInner.style.transform = `translateX(${-width * offset}px)`;
