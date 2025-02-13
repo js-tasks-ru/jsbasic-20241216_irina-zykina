@@ -47,7 +47,6 @@ export default class RibbonMenu {
             bubbles: true,
           });
           this._container.dispatchEvent(customEvent);
-        }
         return;
       }
       let ribbonInner = document.querySelector(".ribbon__inner");
