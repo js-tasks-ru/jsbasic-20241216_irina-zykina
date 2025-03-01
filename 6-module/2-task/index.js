@@ -24,11 +24,11 @@ export default class ProductCard {
     this.elem.addEventListener("click", (event) => {
       let btn = event.target.closest(".card__button");
       if (btn) {
-        let event = new CustomEvent("product-add", {
+        let customEvent = new CustomEvent("product-add", {
           detail: this.product.id,
           bubbles: true,
         });
-        this.elem.dispatchEvent(event);
+        this.elem.dispatchEvent(customEvent);
       }
     });
   }

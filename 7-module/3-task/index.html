@@ -7,7 +7,7 @@
   <title>Бангкок Экспресс: Пошаговый слайдер</title>
 
   <link rel="stylesheet" href="./index.css" />
-  <link rel="stylesheet" href="/assets/styles/common.css" />
+  <link rel="stylesheet" href="../../assets/styles/common.css" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     import StepSlider from './index.js';
 
     let stepSlider = new StepSlider({
-      steps: 5
+      steps: 5, value: 2 
     });
 
     holder.append(stepSlider.elem);
