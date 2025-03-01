@@ -47,7 +47,8 @@ export default class RibbonMenu {
             bubbles: true,
           });
           this._container.dispatchEvent(customEvent);
-        return;
+          return;
+        }
       }
       let ribbonInner = document.querySelector(".ribbon__inner");
       if (arrow.classList.contains("ribbon__arrow_right")) {
@@ -79,6 +80,7 @@ export default class RibbonMenu {
       }
     };
   }
+
   get elem() {
     return this._container;
   }
